@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link href="practice.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- HEADER -->
+     <header id="header" class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Travel
+            </a>
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Abouts</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">Popular</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#explore" class="nav__link">explorer</a>
+                    </li>
+
+
+              </ul>
+              <div class="nav__close" id="nav__close">
+                <i class="ri-close-line"></i>
+              </div>
+            </div>
+            <div class="nav__toggle" id="navtoggle"><i class="ri-menu-line"></i></div>
+        </nav>
+     </header>
+     <div class="main">
+        <section class="home section" id="home">
+            <img src="MYLOVEVRIDAVAN.jpg"  alt="RADHALOVEKRISHNA" class="home__bg">
+            <div class="home__shadow"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h3 class="home_subtitle">
+                        Welcome To Travel
+                    </h3>
+                    <h1>
+                        Explore <br>
+                        The World
+                    </h1>
+                    <p class="home__descrip">
+                        let's Plan to Visit The Devotional Places at Perfect Date
+                    </p>
+                    <a href="#" class="button">
+                        Start Your Journey<i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+              <div class="header_img">
+                <article class="explore">
+                    <img src="ISHAFOUNDATIONISMYLOVE.jpg" class="home__img">
+                    <div class="home__shadow"></div>
+                    <h3 class="home__card_title">ISHAFOUNDATION</h3>
+                </article>
+                <article class="explore">
+                    <img src="DWARAKALOVE.jpg" class="home__img">
+                    <div class="home__shadow" ></div>
+                    <h3 class="home__card_title">DWARAKA</h3>
+                </article>
+                <article class="explore">
+                    <img src="LOVEKEDARNATH.jpg" class="home__img">
+                    <div class="home__shadow"></div>
+                    <h3 class="home__card_title">KEDARNATH</h3>
+                </article>
+                <article class="explore">
+                    <img src="MYLOVEKANYAKUMARI.jpg" class="home__img">
+                    <div class="home__shadow"></div>
+                    <h3 class="home__card_title">KANYAKUMARI</h3>
+                </article>
+            </div>
+            </div>
+        </section>
+     </div>
+     
+<div class="eplore__div">
+     <section class="about__section" id="about">
+        <div class="about__container container grid">
+            <div class="about__data">
+                <h2 class="section__title">
+                    Explore More<br>
+                    About Devotional Plaaces That You Definity You Love
+                </h2>
+                <p class="about__descip">
+                    Vridavan Is the most Beautiful Place in world That you will Love For Ever
+                </p>
+                <a href="#" class="button">
+                    Explore <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+            <div class="about__image">
+                <img src="MYLOVEVRIDAVAN.jpg" class="about__img">
+            </div>
+        </div>
+     </section>
+    </div>
+<!-- <div class="popular__div"> -->
+     <section class="popular__description" id="popular__description">
+        <div class="popular__container container grid">
+            <div class="popular__data">
+                <h2 class="section__title">
+                    Popular In World
+                    <br>
+                    You Love Infinity
+                </h2>
+                <p class="popular_desrip">
+                    Hello This Is The Wolrd One Of the Best Tourist visit
+                </p>
+                <div class="popular__image">
+                    <img src="LOVEKEDARNATH.jpg" class="popular__img">
+                </div>
+            </div>
+        </div>
+     </section>
+<!-- </div> -->
+</body>
+<!-- <srcipt src="index.js"></srcipt> -->
+ <script>
+    const menu=document.querySelector(".nav__menu"),close=document.querySelector(".nav__close"),toggle=document.querySelector(".nav__toggle");
+
+if(toggle){
+    toggle.addEventListener("click",()=>{
+        menu.classList.add("show");
+        toggle.style.opacity="0";
+    })
+}
+if(close)
+{
+    close.addEventListener("click",()=>{
+        menu.classList.remove("show");
+        toggle.style.opacity="1";
+    })
+}
+const blurheader=()=>{
+    const header_scroll=document.getElementById("header");
+    this.scrollY>=100 ?header_scroll.classList.add('blur-header')
+                     :header_scroll.classList.remove('blur-header');
+        }
+
+window.addEventListener('scroll', blurheader);
+    </script>
+</html>

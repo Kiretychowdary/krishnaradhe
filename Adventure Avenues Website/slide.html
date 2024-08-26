@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="slider.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="LOVESHIVA.jpg">
+                </div>
+                <div class="item">
+                    <img src="MYLOVEVRIDAVAN.jpg">
+                </div>
+                <div class="item">
+                    <!-- <img src="SARASWATHIDEVILOVE.jpg"> -->
+                    <img src="LOVEKEDARNATH.jpg">
+                </div>
+                <div class="item">
+                    <img src="DWARAKALOVE.jpg">
+                </div>
+                <div class="item">
+                    <img src="LOVESHIVA.jpg">
+                </div>
+                <div class="item">
+                    <img src="LOVESHIVA.jpg">
+                </div>
+            </div>
+       
+        <div class="buttons">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li> <!-- Added active class to the first dot -->
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li> <!-- Added one more dot to match the number of items -->
+        </ul>
+    </section>
+
+    <script>
+        const list = document.querySelector(".slider .list");
+        const items = document.querySelectorAll(".slider .list .item");
+        const next = document.getElementById("next");
+        const prev = document.getElementById("prev");
+        const dots = document.querySelectorAll(".dots li"); // Corrected selector
+
+        let active = 0;
+
+        next.onclick = function () {
+            if (active + 1 > items.length - 1) {
+                active = 0;
+            } else {
+                active += 1;
+            }
+            nextSlide();
+        };
+
+        prev.onclick = function () {
+            if (active <= 0) {
+                active = items.length - 1;
+            } else {
+                active -= 1;
+            }
+            nextSlide();
+        };
+
+        let interval = setInterval(() => {
+            next.click();
+        }, 3000); // Adjusted interval timing
+
+        function nextSlide() {
+            let check = items[active].offsetLeft;
+            list.style.left = -check + 'px';
+
+            let activeDot = document.querySelector('.dots li.active');
+            activeDot.classList.remove('active');
+            dots[active].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
